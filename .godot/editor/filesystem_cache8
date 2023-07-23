@@ -1,5 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690074084
+::res://::1690074174
+export_presets.cfg::TextFile::-1::1690074097::0::1::::<><>::
 HUD.gd::GDScript::-1::1690074071::0::1::::<>CanvasLayer<>::
 hud.tscn::PackedScene::3006451439799947133::1690074071::0::1::::<><>::res://HUD.gd<>uid://dfa0pas7c775k::::res://fonts/Xolonium-Regular.ttf
 icon.svg::CompressedTexture2D::6347667453890474476::1690074071::1690074071::1::::<><>::
@@ -28,3 +29,8 @@ playerGrey_walk2.png::CompressedTexture2D::5303829503895757873::1690074071::1690
 FONTLOG.txt::TextFile::-1::1690074071::0::1::::<><>::
 LICENSE.txt::TextFile::-1::1690074071::0::1::::<><>::
 Xolonium-Regular.ttf::FontFile::7511751010261581606::1690074071::1690074071::1::::<><>::
+::res://web/::1690074173
+Godot 2D Game Tutorial.apple-touch-icon.png::CompressedTexture2D::4501522553172048084::1690074173::1690074729::1::::<><>::
+Godot 2D Game Tutorial.icon.png::CompressedTexture2D::5495291817839900252::1690074173::1690074729::1::::<><>::
+Godot 2D Game Tutorial.png::CompressedTexture2D::8641628669457869848::1690074173::1690074729::1::::<><>::
+::res://zip/::1690074190
