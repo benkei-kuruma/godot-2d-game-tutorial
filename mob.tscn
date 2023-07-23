@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://5q3e4vkv6637"]
+
+[ext_resource type="Script" path="res://Mob.gd" id="1_aanat"]
+[ext_resource type="Texture2D" uid="uid://b3bnh1bpg000h" path="res://art/enemyFlyingAlt_1.png" id="2_ky2bq"]
+[ext_resource type="Texture2D" uid="uid://bgxnmv8h1dw1j" path="res://art/enemyFlyingAlt_2.png" id="3_m1gnl"]
+[ext_resource type="Texture2D" uid="uid://cj6aadd343edq" path="res://art/enemySwimming_1.png" id="4_3av6t"]
+[ext_resource type="Texture2D" uid="uid://c5vyfquib8rq4" path="res://art/enemySwimming_2.png" id="5_2jksp"]
+[ext_resource type="Texture2D" uid="uid://cvp41k4y3mfcs" path="res://art/enemyWalking_1.png" id="6_bbfo4"]
+[ext_resource type="Texture2D" uid="uid://bcdol1bu0tswj" path="res://art/enemyWalking_2.png" id="7_hsylo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2i33"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ky2bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m1gnl")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_3av6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2jksp")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bbfo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hsylo")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_opcks"]
+radius = 32.0
+height = 92.0
+
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_aanat")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_k2i33")
+animation = &"fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_opcks")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

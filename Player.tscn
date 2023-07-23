@@ -49,3 +49,5 @@ animation = &"up"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_mt0xj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
